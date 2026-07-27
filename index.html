@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="UIUC PHYS 211 期末复习：知识点、公式、逐步例题与自测。" />
+  <title>PHYS 211 · Final Review Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="content.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="返回首页"><span class="brand-mark">211</span><span>FINAL REVIEW LAB</span></a>
+    <div class="top-actions"><span id="progressText">0 / 32 已掌握</span><button id="resetProgress" class="quiet-button">重置进度</button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UIUC · PHYS 211 · SUMMER 2026</p>
+        <h1>不要只看懂。<br><em>要能独立做出来。</em></h1>
+        <p class="hero-intro">依据你提供的 26 份 lecture 整理。31 个核心考点均有直觉解释、公式、典型例题、易错点和即时自测。</p>
+        <div class="hero-actions"><a class="primary-button" href="#chapters">开始复习</a><button id="randomQuiz" class="secondary-button">随机挑战一题</button></div>
+      </div>
+      <aside class="exam-panel">
+        <p class="panel-label">距离期末</p>
+        <div class="countdown"><strong id="daysLeft">—</strong><span>天</span></div>
+        <div class="progress-rail"><span id="progressBar"></span></div>
+        <p><b>资料覆盖：</b>Lecture 1–8、10–16、18–24、26–29</p>
+        <p class="source-note">Lecture 9、17、25 未提供，因此不虚构其中内容。</p>
+      </aside>
+    </section>
+
+    <section class="formula-strip" aria-label="核心守恒律">
+      <span>ΣF = ma</span><span>W<sub>net</sub> = ΔK</span><span>p<sub>i</sub> = p<sub>f</sub></span><span>τ = Iα</span><span>L<sub>i</sub> = L<sub>f</sub></span>
+    </section>
+
+    <section id="chapters" class="workspace">
+      <aside class="chapter-nav">
+        <div class="nav-heading"><p class="eyebrow">COURSE MAP</p><h2>八大模块</h2></div>
+        <nav id="chapterList"></nav>
+      </aside>
+      <div class="chapter-view">
+        <div class="chapter-heading"><div><p id="chapterLectures" class="eyebrow"></p><h2 id="chapterTitle"></h2><p id="chapterSummary"></p></div><div class="chapter-count"><strong id="chapterDone">0</strong><span>本章已掌握</span></div></div>
+        <div id="topicList" class="topic-list"></div>
+      </div>
+    </section>
+
+    <section class="method-section">
+      <p class="eyebrow">EXAM ROUTINE</p><h2>遇到计算题，先做这五步</h2>
+      <ol class="routine"><li><b>画图</b><span>只保留研究对象与相互作用</span></li><li><b>选系统</b><span>明确哪些力是外力</span></li><li><b>定方向</b><span>先规定正方向再写正负号</span></li><li><b>选定律</b><span>力、能量、动量或角动量</span></li><li><b>自检</b><span>单位、极限、方向、守恒</span></li></ol>
+    </section>
+  </main>
+
+  <dialog id="quizDialog"><button class="dialog-close" aria-label="关闭">×</button><p class="eyebrow">RANDOM CHECK</p><h2 id="quizTitle"></h2><p id="quizQuestion"></p><button id="revealQuiz" class="primary-button">显示答案</button><div id="quizAnswer" hidden></div></dialog>
+  <footer><span>PHYS 211 Final Review Lab</span><span>内容依据个人上传课件整理 · 非课程官方网页</span></footer>
+</body>
+</html>
